@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import content from '../content/home.md';
+import Link from 'next/link';
 
 
 

@@ -1,7 +1,6 @@
 
 
 import { useRouter } from 'next/router';
-import Markdown from 'react-markdown';
 
 // //need to figure out how to get event posts
 // function getPosts() {
