@@ -11,7 +11,7 @@ const Events = ({}) =>{
   return(
    <Fragment><h1>{title}</h1>
       <ul>
-              { events.map((e, k) => (
+              {events &&  events.map((e, k) => (
                   <li key={k}>
                     <h2>{e.name}</h2>
                     <p>{e.description}</p>
