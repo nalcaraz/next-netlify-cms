@@ -1,3 +1,4 @@
 ---
-title: Next with CMS
+title: Next - Netlify CMS
 ---
+
