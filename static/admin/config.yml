@@ -6,6 +6,7 @@ collections:
   
   - name: "pages"
     label: "Pages"
+    delete: false
     files:
     - label: "Home"
       name: "home"
