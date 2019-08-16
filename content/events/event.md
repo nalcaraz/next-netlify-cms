@@ -6,5 +6,11 @@ events:
   - body: '**Event** CMS'
     description: CMS added event
     name: Event
+  - body: |-
+      ![](/static/img/cactus.jpg)
+
+      Cactus image description
+    description: Event 2
+    name: Event 2
 ---
 
