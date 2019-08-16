@@ -2,35 +2,24 @@ import React from 'react'
 import Link from 'next/link'
 import navContent from '../content/nav.md'
 
-const links = [
-  { href: 'https://zeit.co/now', label: 'ZEIT' },
-  { href: 'https://github.com/zeit/next.js', label: 'GitHub' }
-].map(link => {
-  link.key = `nav-link-${link.href}-${link.label}`
-  return link
-})
 
-const Nav = () =>{ 
-  let { html , attributes:{ title, cats } } = navContent;
-  return(
-  
-  <nav>
-    <ul>
-    {/* <div dangerouslySetInnerHTML={{ __html: html }}/> */}
-      <li>{title}</li>
-      <li>
-        <Link href='/'>
-          <a>Home</a>
-        </Link>
-      </li>
-      {links.map(({ key, href, label }) => (
-        <li key={key}>
-          <a href={href}>{label}</a>
+const Nav = () => {
+  let { attributes: { title } } = navContent;
+  return (
+
+    <nav>
+      <ul>
+        {/* <div dangerouslySetInnerHTML={{ __html: html }}/> */}
+        <li>{title}</li>
+        <li>
+          <Link href='/'>
+            <a>Home</a>
+          </Link>
         </li>
-      ))}
-    </ul>
 
-    <style jsx>{`
+      </ul>
+
+      <style jsx>{`
       :global(body) {
         margin: 0;
         font-family: -apple-system, BlinkMacSystemFont, Avenir Next, Avenir,
@@ -38,6 +27,9 @@ const Nav = () =>{
       }
       nav {
         text-align: center;
+        border: solid 1px #9E9E9E;
+        background-color: #9E9E9E;
+        color: white;
       }
       ul {
         display: flex;
@@ -56,7 +48,8 @@ const Nav = () =>{
         font-size: 13px;
       }
     `}</style>
-  </nav>
-)}
+    </nav>
+  )
+}
 
 export default Nav

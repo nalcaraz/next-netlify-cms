@@ -1,9 +1,19 @@
 backend:
-  name:  git-gateway
+  name:  test-repo
   branch: master
 media_folder: static/img
 collections:
-  
+  - name: "navTitle"
+    label: "Navigation Title"
+    delete: false
+    files:
+    - label: "Title"
+      name: "title"
+      file: content/nav.md
+      widget: "string"
+      pattern: ['.{10,}', "Must have at least 10 characters"]
+      fields:
+        - {label: "Title", name: "title", widget: "string"}
   - name: "pages"
     label: "Pages"
     delete: false
@@ -33,5 +43,6 @@ collections:
           widget: list
           fields: 
             - { label: "Name", name: "name", widget: "string"}
+            - { label: "Event Date", name: "eventDate", widget: "datetime", format: "MM/DD/YYYY @ hh:mm"}
             - { label: "Description", name: "description", widget: "text"}
             - { label: "Body", name: "body", widget: "markdown" }

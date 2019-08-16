@@ -3,15 +3,15 @@ import Link from 'next/link'
 import Head from 'next/head'
 import Nav from '../components/nav'
 import Events from '../components/events';
+import Layout from '../components/layout';
 
 const Home = () => (
-  <div>
+  <Layout>
     <Head>
       <title>Home</title>
     </Head>
 
-    <Nav />
-<Events></Events>
+    <Events></Events>
 
     <style jsx>{`
       .hero {
@@ -59,7 +59,7 @@ const Home = () => (
         color: #333;
       }
     `}</style>
-  </div>
+  </Layout>
 )
 
 export default Home
