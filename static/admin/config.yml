@@ -5,7 +5,7 @@ media_folder: static/img
 collections:
   - name: "event"
     label: "Events"
-    folder: "content/events"
+    folder: "content/events/event.md"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     editor:
