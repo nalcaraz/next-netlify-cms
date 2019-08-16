@@ -14,7 +14,7 @@ const EventsPage = (props) => {
   return (
     <Layout className="markdown"><h1>{router.query.event}</h1>
       {/* <div dangerouslySetInnerHTML={{ __html: event[0].body }}/> */}
-      <Markdown source={event.body}></Markdown>
+     {event &&  <Markdown source={event.body}></Markdown>}
       <style jsx global>{`
       .markdown {
         font-family: 'Arial';
